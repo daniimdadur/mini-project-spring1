@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>add - gedung</title>
+</head>
+<body>
+<h1>Add Data Gedung</h1>
+<form th:action="@{~/gedung/save}" method="post">
+
+  <label>Id</label><br/>
+  <input type="text" name="id" placeholder="Isi Id"><br/>
+
+  <label>Nama Gedung</label><br/>
+  <input type="text" name="namaGedung" placeholder="Isi Nama Gedung"><br/>
+
+  <label>Kode Gedung</label><br/>
+  <input type="text" name="kodeGedung" placeholder="Isi Kode Gedung"><br/>
+
+  <label>Jumlah Lantai</label><br/>
+  <input type="text" name="jumlahLantai" placeholder="Isi Jumlah Lantai"><br/>
+
+  <button type="submit">save</button>
+  <button>
+    <a th:href="@{~/gedung}">Back</a>
+  </button>
+</form>
+</body>
+</html>

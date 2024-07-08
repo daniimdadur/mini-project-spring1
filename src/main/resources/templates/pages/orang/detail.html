@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail-orang</title>
+</head>
+<body>
+<h1>Detail Orang</h1>
+<form th:action="@{~/orang/detail}" method="get">
+
+    <label>Id</label><br>
+    <input type="text" name="id" th:value="${orang.id}"><br>
+
+    <label>Nama</label><br>
+    <input type="text" name="nama" th:value="${orang.nama}"><br>
+
+    <label>Jenis Kelamin</label><br>
+    <input type="text" name="jk" th:value="${orang.jk}"><br>
+
+    <label>Usia</label><br>
+    <input type="text" name="usia" th:value="${orang.usia}"><br>
+
+    <label>Alamat</label><br>
+    <input type="text" name="alamat" th:value="${orang.alamat}"><br>
+
+    <button>
+        <a th:href="@{~/orang}">Back</a>
+    </button>
+
+</form>
+</body>
+</html>

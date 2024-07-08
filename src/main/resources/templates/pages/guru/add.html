@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>add.guru</title>
+</head>
+<body>
+<h1>Add Guru</h1>
+<form th:action="@{~/guru/save}" method="post">
+
+  <label>Id</label><br/>
+  <input type="text" name="id" placeholder="Isi Id"><br/>
+
+  <label>Nama</label><br/>
+  <input type="text" name="nama" placeholder="Isi Nama Lengkap"><br/>
+
+  <label>NIP</label><br/>
+  <input type="text" name="nip" placeholder="Isi NIP"><br/>
+
+  <label>Jenis Kelamin</label><br/>
+  <input type="text" name="jk" placeholder="Isi Gender Anda"><br/>
+
+  <label>Gelar</label><br/>
+  <input type="text" name="gelar" placeholder="Isi Gelar Anda"><br/>
+
+  <label>Alamat</label><br/>
+  <input type="text" name="alamat" placeholder="Isi Alamat Tinggal Saat Ini"><br/>
+
+  <button type="submit">Save</button>
+</form>
+</body>
+</html>

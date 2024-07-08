@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>update/edit.guru</title>
+</head>
+<body>
+<h1>Update Guru</h1>
+<form th:action="@{~/guru/update}" method="post">
+
+    <label>Id</label><br/>
+    <input type="text" name="id" th:value="${update.id}"><br/>
+
+    <label>Nama</label><br/>
+    <input type="text" name="nama" th:value="${update.nama}"><br/>
+
+    <label>NIP</label><br/>
+    <input type="text" name="nip" th:value="${update.nip}"><br/>
+
+    <label>Jenis Kelamin</label><br/>
+    <input type="text" name="jk" th:value="${update.jk}"><br/>
+
+    <label>Gelar</label><br/>
+    <input type="text" name="gelar" th:value="${update.gelar}"><br/>
+
+    <label>Alamat</label><br/>
+    <input type="text" name="alamat" th:value="${update.alamat}"><br/>
+
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>

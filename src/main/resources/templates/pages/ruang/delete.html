@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>delete - ruang</title>
+</head>
+<body>
+<h1>Delete Ruang</h1>
+<form th:action="@{~/ruang/delete}" method="post">
+
+    <label>Id</label><br/>
+    <input type="text" name="id" th:value="${delete.id}"><br/>
+
+    <label>Nama Ruang</label><br/>
+    <input type="text" name="namaRuang" th:value="${delete.namaRuang}"><br/>
+
+    <label>Kode Ruang</label><br/>
+    <input type="text" name="kodeRuang" th:value="${delete.kodeRuang}"><br/>
+
+    <button>
+        Delete
+    </button>
+    <button>
+        <a th:href="@{/ruang}">Back</a>
+    </button>
+</form>
+</body>
+</html>

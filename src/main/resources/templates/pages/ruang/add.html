@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>add - ruang</title>
+</head>
+<body>
+<h1>Add Ruang</h1>
+<form th:action="@{~/ruang/save}" method="post">
+
+    <label>Id</label><br/>
+    <input type="text" name="id" placeholder="Isi Id"><br/>
+
+    <label>Nama Ruang</label><br/>
+    <input type="text" name="namaRuang" placeholder="Isi Nama Ruang"><br/>
+
+    <label>Kode Ruang</label><br/>
+    <input type="text" name="kodeRuang" placeholder="Isi Kode Ruang"><br/>
+
+    <button type="submit">Save</button>
+    <button>
+        <a th:href="@{~/ruang}">Back</a>
+    </button>
+</form>
+</body>
+</html>

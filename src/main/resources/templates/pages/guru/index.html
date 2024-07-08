@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>index.guru</title>
+</head>
+<body>
+
+<h1>INDEX GURU</h1>
+<a th:href="@{~/guru/add}">Tambah Guru</a>
+<table>
+
+    <thead>
+
+            <tr>
+                <th>Id</th>
+                <th>Nama</th>
+                <th>NIP</th>
+                <th>Jenis Kelamin</th>
+                <th>Gelar</th>
+                <th>Alamat</th>
+            </tr>
+    </thead>
+    <tbody>
+            <tr th:each="item : ${data}">
+                <td th:text="${item.id}"></td>
+                <td th:text="${item.nama}"></td>
+                <td th:text="${item.nip}"></td>
+                <td th:text="${item.jk}"></td>
+                <td th:text="${item.gelar}"></td>
+                <td th:text="${item.alamat}"></td>
+                <td>
+                    <a th:href="@{~/guru/edit/{id}(id=${item.id})}">Edit</a>
+                    <a th:href="@{~/guru/delete/{id}(id=${item.id})}">Delete</a>
+                    <a th:href="@{~/guru/detail/{id}(id=${item.id})}">Detail</a>
+                </td>
+            </tr>
+    </tbody>
+</table>
+</body>
+</html>

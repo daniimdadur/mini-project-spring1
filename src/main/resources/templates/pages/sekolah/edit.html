@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>edit - sekolah</title>
+</head>
+<body>
+<h1>Edit Sekolah</h1>
+<form th:action="@{~/sekolah/update}" method="post">
+
+  <label>Id</label><br/>
+  <input type="text" name="id" th:value="${edit.id}"><br/>
+
+  <label>Nama Sekolah</label><br/>
+  <input type="text" name="namaSekolah" th:value="${edit.namaSekolah}"><br/>
+
+  <label>Nama Jalan</label><br/>
+  <input type="text" name="namaJalan" th:value="${edit.namaJalan}"><br/>
+
+  <label>Alamat Sekolah</label><br/>
+  <input type="text" name="alamatSekolah" th:value="${edit.alamatSekolah}"><br/>
+
+  <button type="submit">SAVE</button>
+  <button>
+    <a th:href="@{~/sekolah}">BACK</a>
+  </button>
+</form>
+</body>
+</html>

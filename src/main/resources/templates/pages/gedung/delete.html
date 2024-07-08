@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>delete - gedung</title>
+</head>
+<body>
+<h1>Delete Gedung</h1>
+<form th:action="@{~/gedung/delete}" method="post">
+
+    <label>Id</label><br/>
+    <input type="text" name="id" th:value="${delete.id}"><br/>
+
+    <label>Nama Gedung</label><br/>
+    <input type="text" name="namaGedung" th:value="${delete.namaGedung}"><br/>
+
+    <label>Kode Gedung</label><br/>
+    <input type="text" name="kodeGedung" th:value="${delete.kodeGedung}"><br/>
+
+    <label>Jumlah Lantai</label><br/>
+    <input type="text" name="jumlahLantai" th:value="${delete.jumlahLantai}"><br/>
+
+    <button>DELETE</button>
+    <button>
+        <a th:href="@{~/gedung}">BACK</a>
+    </button>
+</form>
+</body>
+</html>

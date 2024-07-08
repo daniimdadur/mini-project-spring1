@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>edit - siswa</title>
+</head>
+<body>
+<h1>Edit Siswa</h1>
+<form th:action="@{~/siswa/update}" method="post">
+
+    <label>Id</label><br/>
+    <input type="text" name="id" th:value="${siswa.id}"><br/>
+
+    <label>Nama</label><br/>
+    <input type="text" name="nama" th:value="${siswa.nama}"><br/>
+
+    <label>NIM</label><br/>
+    <input type="text" name="nim" th:value="${siswa.nim}"><br/>
+
+    <label>Jenis Kelamin</label><br/>
+    <input type="text" name="jk" th:value="${siswa.jk}"><br/>
+
+    <label>Tempat Tanggal Lahir</label><br/>
+    <input type="text" name="ttl" th:value="${siswa.ttl}"><br/>
+
+    <label>Alamat</label><br/>
+    <input type="text" name="alamat" th:value="${siswa.alamat}"><br/>
+
+    <button type="submit">Simpan</button>
+</form>
+</body>
+</html>

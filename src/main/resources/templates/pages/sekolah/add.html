@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>add - sekolah</title>
+</head>
+<body>
+<h1>Add Sekolah</h1>
+<form th:action="@{~/sekolah/save}" method="post">
+
+  <label>Id</label><br/>
+  <input type="text" name="id" placeholder="Isi Id"><br/>
+
+  <label>Nama Sekolah</label><br/>
+  <input type="text" name="namaSekolah" placeholder="Isi Nama Sekolah"><br/>
+
+  <label>Nama Jalan</label><br/>
+  <input type="text" name="namaJalan" placeholder="Isi Nama Jalan"><br/>
+
+  <label>Alamat Sekolah</label><br/>
+  <input type="text" name="alamatSekolah" placeholder="Isi Alamat Sekolah"><br/>
+
+  <button type="submit">SAVE</button>
+  <button>
+    <a th:href="@{~/sekolah}">BACK</a>
+  </button>
+</form>
+</body>
+</html>

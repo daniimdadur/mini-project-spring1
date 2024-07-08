@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>detail - sekolah</title>
+</head>
+<body>
+<h1>Detail Sekolah</h1>
+<form th:action="@{~/sekolah/detail}" method="get">
+
+    <label>Id</label><br/>
+    <input type="text" name="id" th:value="${detail.id}"><br/>
+
+    <label>Nama Sekolah</label><br/>
+    <input type="text" name="namaSekolah" th:value="${detail.namaSekolah}"><br/>
+
+    <label>Nama Jalan</label><br/>
+    <input type="text" name="namaJalan" th:value="${detail.namaJalan}"><br/>
+
+    <label>Alamat Sekolah</label><br/>
+    <input type="text" name="alamatSekolah" th:value="${detail.alamatSekolah}"><br/>
+
+    <button>
+        <a th:href="@{~/sekolah}">CLOSE</a>
+    </button>
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>edit - gedung</title>
+</head>
+<body>
+<h1>Edit Gedung</h1>
+<form th:action="@{~/gedung/update}" method="post">
+
+    <label>Id</label><br/>
+    <input type="text" name="id" th:value="${edit.id}"><br/>
+
+    <label>Nama Gedung</label><br/>
+    <input type="text" name="namaGedung" th:value="${edit.namaGedung}"><br/>
+
+    <label>Kode Gedung</label><br/>
+    <input type="text" name="kodeGedung" th:value="${edit.kodeGedung}"><br/>
+
+    <label>Jumlah Lantai</label><br/>
+    <input type="text" name="jumlahLantai" th:value="${edit.jumlahLantai}"><br/>
+
+    <button type="submit">SAVE</button>
+    <button>
+        <a th:href="@{~/gedung}">BACK</a>
+    </button>
+</form>
+</body>
+</html>

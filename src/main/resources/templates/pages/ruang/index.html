@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>index.ruang</title>
+</head>
+<body>
+
+<h1>INDEX RUANG</h1>
+<a th:href="@{~/ruang/add}">Tambah Ruang</a>
+<table>
+
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nama Ruang</th>
+                <th>Kode Ruang</th>
+            </tr>
+    </thead>
+    <tbody>
+            <tr th:each="ruang : ${index}">
+                <td th:text="${ruang.id}"></td>
+                <td th:text="${ruang.namaRuang}"></td>
+                <td th:text="${ruang.kodeRuang}"></td>
+                <td>
+                    <a th:href="@{~/ruang/edit/{id}(id=${ruang.id})}">Edit</a>
+                    <a th:href="@{~/ruang/delete/{id}(id=${ruang.id})}">Delete</a>
+                    <a th:href="@{~/ruang/detail/{id}(id=${ruang.id})}">Detail</a>
+                </td>
+            </tr>
+    </tbody>
+</table>
+</body>
+</html>

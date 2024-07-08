@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>index - gedung</title>
+</head>
+<body>
+
+<h1>INDEX GEDUNG</h1>
+<a th:href="@{~/gedung/add}">New Gedung</a>
+<table>
+
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nama Gedung</th>
+                <th>Kode Gedung</th>
+                <th>Jumlah Lantai</th>
+            </tr>
+    </thead>
+    <tbody>
+            <tr th:each="item : ${index}">
+                <td th:text="${item.id}"></td>
+                <td th:text="${item.namaGedung}"></td>
+                <td th:text="${item.kodeGedung}"></td>
+                <td th:text="${item.jumlahLantai}"></td>
+                <td>
+                    <a th:href="@{~/gedung/edit/{id}(id=${item.id})}">EDIT</a>
+                    <a th:href="@{~/gedung/delete/{id}(id=${item.id})}">DELETE</a>
+                    <a th:href="@{~/gedung/detail/{id}(id=${item.id})}">DETAIL</a>
+                </td>
+            </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>detail.guru</title>
+</head>
+<body>
+<h1>Detail Guru</h1>
+<form th:action="@{~/guru/detail}" method="get">
+
+    <label>Id</label><br/>
+    <input type="text" name="id" th:value="${detail.id}"><br/>
+
+    <label>Nama</label><br/>
+    <input type="text" name="nama" th:value="${detail.nama}"><br/>
+
+    <label>NIP</label><br/>
+    <input type="text" name="nip" th:value="${detail.nip}"><br/>
+
+    <label>Jenis Kelamin</label><br/>
+    <input type="text" name="jk" th:value="${detail.jk}"><br/>
+
+    <label>Gelar</label><br/>
+    <input type="text" name="gelar" th:value="${detail.gelar}"><br/>
+
+    <label>Alamat</label><br/>
+    <input type="text" name="alamat" th:value="${detail.alamat}"><br/>
+
+</form>
+</body>
+</html>

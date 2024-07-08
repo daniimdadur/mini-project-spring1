@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>detail - ruang</title>
+</head>
+<body>
+<h1>Detail Orang</h1>
+<form th:action="@{~/ruang/detail}" method="get">
+
+    <label>Id</label><br/>
+    <input type="text" name="id" th:value="${detail.id}"><br/>
+
+    <label>Nama Ruang</label><br/>
+    <input type="text" name="namaRuang" th:value="${detail.namaRuang}"><br/>
+
+    <label>Kode Ruang</label><br/>
+    <input type="text" name="kodeRuang" th:value="${detail.kodeRuang}"><br/>
+
+    <button>
+        <a th:href="@{~/ruang}">Close</a>
+    </button>
+</form>
+</body>
+</html>

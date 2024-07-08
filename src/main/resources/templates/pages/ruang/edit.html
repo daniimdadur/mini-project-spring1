@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>edit - ruang</title>
+</head>
+<body>
+<h1>Edit Ruang</h1>
+<form th:action="@{~/ruang/update}" method="post">
+
+    <label>Id</label><br/>
+    <input type="text" name="id" th:value="${edit.id}"><br/>
+
+    <label>Nama Ruang</label><br/>
+    <input type="text" name="namaRuang" th:value="${edit.namaRuang}"><br/>
+
+    <label>Kode Ruang</label><br/>
+    <input type="text" name="kodeRuang" th:value="${edit.kodeRuang}"><br/>
+
+    <button type="submit">Save</button>
+    <button>
+        <a th:href="@{~/ruang}">Back</a>
+    </button>
+</form>
+</body>
+</html>

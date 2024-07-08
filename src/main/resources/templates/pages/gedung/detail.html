@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>detail - gedung</title>
+</head>
+<body>
+<h1>Detail Gedung</h1>
+<form th:action="@{~/gedung/detail}" method="get">
+
+  <label>Id</label><br/>
+  <input type="text" name="id" th:value="${detail.id}"><br/>
+
+  <label>Nama Gedung</label><br/>
+  <input type="text" name="namaGedung" th:value="${detail.namaGedung}"><br/>
+
+  <label>Kode Gedung</label><br/>
+  <input type="text" name="kodeGedung" th:value="${detail.kodeGedung}"><br/>
+
+  <label>Jumlah Lantai</label><br/>
+  <input type="text" name="jumlahLantai" th:value="${detail.jumlahLantai}"><br/>
+
+  <button>
+    <a th:href="@{~/gedung}">CLOSE</a>
+  </button>
+</form>
+</body>
+</html>

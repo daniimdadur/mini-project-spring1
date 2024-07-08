@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>index - sekolah</title>
+</head>
+<body>
+
+<h1>Index Sekolah</h1>
+<a th:href="@{~/sekolah/add}">Tambah Sekolah</a>
+<table>
+
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nama Sekolah</th>
+                <th>Nama Jalan</th>
+                <th>Alamat Sekolah</th>
+            </tr>
+    </thead>
+    <tbody>
+            <tr th:each="sekolah : ${index}">
+                <td th:text="${sekolah.id}"></td>
+                <td th:text="${sekolah.namaSekolah}"></td>
+                <td th:text="${sekolah.namaJalan}"></td>
+                <td th:text="${sekolah.alamatSekolah}"></td>
+                <td>
+                    <a th:href="@{~/sekolah/edit/{id}(id=${sekolah.id})}">Edit</a>
+                    <a th:href="@{~/sekolah/delete/{id}(id=${sekolah.id})}">Delete</a>
+                    <a th:href="@{~/sekolah/detail/{id}(id=${sekolah.id})}">Detail</a>
+                </td>
+            </tr>
+    </tbody>
+</table>
+</body>
+</html>
